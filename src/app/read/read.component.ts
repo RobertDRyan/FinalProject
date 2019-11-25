@@ -19,7 +19,11 @@ export class ReadComponent implements OnInit {
 
   onDelete(id:String){
 
-    this.carsService.DeleteCar(id).subscribe();
+    this.carsService.DeleteCar(id).subscribe(
+      () =>{
+        this.ngOnInit();
+      }
+    );
   }
 
 }

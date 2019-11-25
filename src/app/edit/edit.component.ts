@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
 import { CarsService } from '../Services/cars.service'
+import { Router, ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-edit',
@@ -10,22 +10,24 @@ import { CarsService } from '../Services/cars.service'
 })
 export class EditComponent implements OnInit {
   car:any=[];
-    constructor(private carService:CarsService, private router: Router,
-      private route:ActivatedRoute) { }
+    constructor(private router: Router, private route: ActivatedRoute, 
+      private carsService:CarsService) { }
 
   ngOnInit() {
-    this.carService.GetCar(this.route.snapshot.params['id']).subscribe(
-      (data) => {
+    this.carsService.getCar(this.route.snapshot.params['id']).subscribe(
+      data => {
         this.car = data;
-      }
-    )
+        console.log(this.car._id);
+      })
+
+
   }
 
-  onEditCar(form:NgForm){
-
-    this.carService.UpdateCar(this.car._id, form.value.Make,
+  onEditCar(form: NgForm ){
+    this.carsService.UpdateCar(this.car._id, form.value.Make,
       form.value.Model, form.value.Engine, form.value.Year).subscribe();
       this.router.navigate(['/read']);
+      alert("You have successfully updated a cars information");
   }
 
 }

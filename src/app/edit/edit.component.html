@@ -1,52 +1,50 @@
 <mat-card>
     <form (submit)="onEditCar(carForm)" #carForm="ngForm">
-       <mat-form-field>
-           <label>Car Make</label>
-           <input
-               matInput
-               type="text"
-               name="Make"
-               ngModel={{car.Make}}
-               required
-               #title="ngModel">
-       </mat-form-field>
-       <mat-form-field>
-        <label>Car Model</label>
-            <textarea
+        <mat-form-field>
+            <label>Car Make</label>
+            <input
                 matInput
-                name="Model"
-                ngModel={{car.Model}}
+                type="text"
+                name="Make"
+                ngModel={{car.Make}}
                 required
-                #content="ngModel">
-            </textarea>
-      </mat-form-field>  
-      <mat-form-field>
-        <label>Engine size</label>
-            <textarea
-                matInput
-                rows="4"
-                name="Engine"
-                ngModel={{car.Engine}}
-                required
-                #content="ngModel">
-            </textarea>
-         </mat-form-field>
-         <mat-form-field>
-            <label>Year</label>
+                #title="ngModel">
+        </mat-form-field>
+        <mat-form-field>
+            <label>Car Model</label>
                 <textarea
                     matInput
-                    rows="4"
-                    name="Year"
-                    ngModel={{car.Year}}
+                    name="Model"
+                    ngModel={{car.Model}}
                     required
                     #content="ngModel">
                 </textarea>
-        </mat-form-field>
+        </mat-form-field>  
+        <mat-form-field>
+            <label>Engine size</label>
+                <textarea
+                    matInput
+                    name="Engine"
+                    ngModel={{car.Engine}}
+                    required
+                    #content="ngModel">
+                </textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <label>Year</label>
+                    <textarea
+                        matInput
+                        name="Year"
+                        ngModel={{car.Year}}
+                        required
+                        #content="ngModel">
+                    </textarea>
+            </mat-form-field>
 
-        <button
-        mat-raised-button
-        color="accent"
-        type="submit">Update Car
-    </button>
-</form>
+            <button
+            mat-raised-button
+            color="accent"
+            type="submit">Update Car
+        </button>
+    </form>
 </mat-card>

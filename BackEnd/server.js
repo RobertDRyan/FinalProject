@@ -5,12 +5,12 @@ const PORT = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-var mongoDB = 'mongodb+srv://Robert:G00332617@cluster0-ui2qk.mongodb.net/Car?retryWrites=true&w=majority'
+var mongoDB = 'mongodb+srv://admin:admin@cluster3-ic6g7.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(mongoDB, {useNewUrlParser:true});
 
 const Schema = mongoose.Schema;
 
-constcarSchema = new Schema({
+const carSchema = new Schema({
     Make:String,
     Model:String,
     Engine:String,

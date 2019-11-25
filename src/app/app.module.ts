@@ -20,6 +20,7 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import {FormsModule} from '@angular/forms';
 import { ReadComponent } from './read/read.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ReadComponent } from './read/read.component';
     AppComponent,
     CreateComponent,
     EditComponent,
-    ReadComponent
+    ReadComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

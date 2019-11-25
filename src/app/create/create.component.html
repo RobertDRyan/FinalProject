@@ -1,5 +1,5 @@
 <mat-card>
-    <form (submit)="onAddCar(movieForm)" #carForm="ngForm">
+    <form (submit)="onAddCar(carForm)" #carForm="ngForm">
         <mat-form-field>
             <label>Car Make</label>
             <input 
@@ -40,9 +40,15 @@
                 required
                 #content="ngModel"></textarea>
         </mat-form-field>
+<br>
 
-        <button mat-raised-button
+
+
+ <button
+ mat-raised-button
         color="accent"
         type="submit"> Save Car</button>
+        
     </form>
+   
 </mat-card>
