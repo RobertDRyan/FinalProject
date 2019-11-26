@@ -1,15 +1,18 @@
 
-   <mat-toolbar color="primary"> 
+   
+   <mat-toolbar class="backToolbar"> 
     <mat-toolbar-row>
-            <span class="title-center">
+            <span  class="title-center">
         My single page application
     </span>
       </mat-toolbar-row>
       <mat-toolbar-row>
-  <button mat-button [routerLink]="['/']">Home</button>
-  <button mat-button [routerLink]="['/create']" color="Warn">Create</button>
-  <button mat-button [routerLink]="['/read']">Read</button>
+  <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect [routerLink]="['/']">Home</button>
+  <button mdbBtn type="button" gradient="aqua" rounded="true" mdbWavesEffect [routerLink]="['/create']">Create</button>
+  <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect [routerLink]="['/read']">Read</button> 
+  <button mdbBtn type="button" gradient="aqua" rounded="true" mdbWavesEffect [routerLink]="['/search']">Search</button>
 </mat-toolbar-row>
  </mat-toolbar>
+ 
 
 <router-outlet></router-outlet>

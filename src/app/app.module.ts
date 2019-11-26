@@ -16,11 +16,18 @@ import {
   
   } from '@angular/material';
 
+// // MDB Angular Pro
+// import { ButtonsModule, WavesModule, CollapseModule } from 'ng-uikit-pro-standard'
+
+  // MDB Angular Pro
+import { ButtonsModule, WavesModule, CollapseModule } from 'angular-bootstrap-md';
+
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import {FormsModule} from '@angular/forms';
 import { ReadComponent } from './read/read.component';
 import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -29,9 +36,13 @@ import { HomeComponent } from './home/home.component';
     CreateComponent,
     EditComponent,
     ReadComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
+    ButtonsModule,
+    WavesModule,
+    CollapseModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

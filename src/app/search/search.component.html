@@ -1,0 +1,30 @@
+<mat-accordion *ngFor="let car of MyCars">
+    <mat-expansion-panel [expanded]="true" >
+        
+        <mat-expansion-panel-header>
+   
+            <mat-panel-title>
+                <h3> {{ car.Make }} </h3>
+            </mat-panel-title>
+
+            <mat-panel-description>
+                <h3>{{ car.Model }}</h3>
+            </mat-panel-description>
+        
+            <mat-panel-description>
+                <h3>{{ car.Engine }}</h3>
+            </mat-panel-description>
+
+            <mat-panel-description>
+                <h3>{{ car.Year }}</h3>
+            </mat-panel-description>
+    
+        </mat-expansion-panel-header>
+
+        <mat-action-row>
+           	<button mat-button [routerLink]="['/edit', car._id]" color="primary">EDIT</button>
+            <button mat-button (click)="onDelete(car._id)" color="warn">DELETE</button>
+        </mat-action-row>
+
+    </mat-expansion-panel>
+</mat-accordion>
