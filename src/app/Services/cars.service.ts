@@ -23,6 +23,10 @@ export class CarsService {
     return this.http.delete('http://localhost:4000/api/cars/'+id);
   }
 
+GetCarByMake(Make:string):Observable<any>{
+  return this.http.get("http://localhost:4000/api/cars/search/" + Make);
+}
+
   getCar(id: String):Observable<any>{
     return this.http.get('http://localhost:4000/api/cars/'+ id);
   }

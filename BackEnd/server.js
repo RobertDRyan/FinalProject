@@ -50,16 +50,12 @@ app.get('/api/cars', (req,res,next) => {
     })
   })
 
-  app.get('/api/cars/search/:Make/:criteria', (req,res)=>{
-    console.log(req.params.title);
-    console.log(req.params.criteria);
-  if(req.params.criteria == 'Make')
-    {
+  app.get('/api/cars/search/:Make', (req,res)=>{
+ 
     CarModel.find({ 'Make': req.params.Make},
   (error,data) =>{
     res.json(data);
-  })
-    }
+  });
   })
 
   app.post('/api/cars', (req,res) =>{

@@ -25,7 +25,7 @@ const routes: Routes = [
     component: EditComponent
   },
   {
-    path: 'search',
+    path: 'search/:Make',
     component: SearchComponent
   }
 ];

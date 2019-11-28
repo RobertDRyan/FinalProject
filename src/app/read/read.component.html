@@ -1,17 +1,13 @@
-<!-- <div  layout="row"  layout-align="space-around start">
-<mat-panel-title >
-        <h3> Manufacterer  </h3>
-    </mat-panel-title>
-    <mat-panel-title >
-        <h3> Model </h3>
-    </mat-panel-title>
-    <mat-panel-title >
-        <h3> Engine size </h3>
-    </mat-panel-title>
-    <mat-panel-title >
-        <h3> Year </h3>
-    </mat-panel-title>
-</div> -->
+<mat-card>
+    <mat-form-field>
+        <mat-select [(ngModel)] = "selectedMake" name = "Make" required>
+            <mat-option *ngFor = "let Make of Make" [value] = "Make">
+            {{Make}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-button (click)="SearchByMake(selectedMake)" color="warn">Search by Make</button>
+</mat-card>
 
 <mat-accordion *ngFor="let car of MyCars">
     <mat-expansion-panel [expanded]="true" >

@@ -13,6 +13,7 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
+  MatSelectModule,
   
   } from '@angular/material';
 
@@ -50,6 +51,7 @@ import { SearchComponent } from './search/search.component';
 MatButtonModule,
 MatToolbarModule,
 MatExpansionModule,
+MatSelectModule,
 BrowserAnimationsModule,
 MatInputModule,
 FormsModule
