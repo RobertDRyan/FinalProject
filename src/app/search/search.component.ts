@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  cars: any = [];
+  MyCars: any = [];
   selectedMake: string;
 
 
@@ -28,7 +28,7 @@ export class SearchComponent implements OnInit {
 
     if(this.route.snapshot.params.Make != null){
       this.carsService.GetCarByMake(this.route.snapshot.params.Make).subscribe((data) => {
-        this.cars = data;
+        this.MyCars = data;
       })
     }
 
