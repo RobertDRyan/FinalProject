@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CarsService } from '../Services/cars.service'
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit',
@@ -11,7 +12,8 @@ import { NgForm } from '@angular/forms';
 export class EditComponent implements OnInit {
   car:any=[];
     constructor(private router: Router, private route: ActivatedRoute, 
-      private carsService:CarsService) { }
+      private carsService:CarsService,
+      private location: Location) { }
 
   ngOnInit() {
     this.carsService.getCar(this.route.snapshot.params['id']).subscribe(
@@ -27,7 +29,9 @@ export class EditComponent implements OnInit {
     this.carsService.UpdateCar(this.car._id, form.value.Make,
       form.value.Model, form.value.Engine, form.value.Year).subscribe();
       this.router.navigate(['/read']);
+    //  this.location.back();
       alert("You have successfully updated a cars information");
+     
   }
 
 }

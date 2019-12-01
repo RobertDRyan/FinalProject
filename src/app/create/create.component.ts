@@ -30,7 +30,7 @@ export class CreateComponent implements OnInit {
 
        }
        );
-       alert('You have successfully added a car to our database!');
+       alert('You have successfully added a ' + form.value.Make + ' to our database!');
        form.resetForm();
        
   }

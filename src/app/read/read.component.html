@@ -1,3 +1,5 @@
+<div>
+
 <mat-card>
     <mat-form-field>
         <mat-select [(ngModel)] = "selectedMake" name = "Make" required>
@@ -7,6 +9,7 @@
         </mat-select>
     </mat-form-field>
     <button mat-button (click)="SearchByMake(selectedMake)">Search by Make</button>
+    
 </mat-card>
 
 <mat-accordion *ngFor="let car of MyCars">
@@ -39,3 +42,5 @@
 
     </mat-expansion-panel>
 </mat-accordion>
+
+</div>
